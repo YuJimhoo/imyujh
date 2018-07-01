@@ -10,7 +10,7 @@ function index(page){
     //url:"https://api.github.com/repos/"+_config['owner']+"/"+_config['repo']+"/issues",
 debugger;
     $.ajax({
-        url:_config['repo']+"/issues",
+        url:"https://api.github.com/repos/"+_config['owner']+"/"+_config['repo']+"/issues",
         data:{
             filter       : 'created',
             page         : page,
