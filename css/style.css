@@ -82,3 +82,16 @@ img{
 .ds-social-links{
   width: 300px !important; /* 修正多说在 iphone5 宽度下带来的横向滚动条的问题*/
 }
+.imgPic img{
+	width: 200px;
+	height: 200px;
+	border: 1px solid #ccc;
+}
+.imgPic img:hover{
+	border: 1px solid red;
+}
+.imgPic{
+	width: 666px;
+	margin: 0 auto;
+	padding: 0 auto;
+}
