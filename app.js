@@ -7,7 +7,7 @@ function index(page){
       $('#container').html(_G.postList[page]);
       return;
     }
-
+debugger;
     $.ajax({
         url:"https://api.github.com/repos/"+_config['owner']+"/"+_config['repo']+"/issues",
         data:{
