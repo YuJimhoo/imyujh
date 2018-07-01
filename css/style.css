@@ -93,6 +93,6 @@ img{
 }
 .imgPic{
 	width: 666px;
-	margin: 0 auto;
-	padding: 0 auto;
+	float:right;
+	padding-right:30px;
 }
