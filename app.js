@@ -7,9 +7,10 @@ function index(page){
       $('#container').html(_G.postList[page]);
       return;
     }
+    //url:"https://api.github.com/repos/"+_config['owner']+"/"+_config['repo']+"/issues",
 debugger;
     $.ajax({
-        url:"https://api.github.com/repos/"+_config['owner']+"/"+_config['repo']+"/issues",
+        url:_config['repo']+"/issues",
         data:{
             filter       : 'created',
             page         : page,
