@@ -83,8 +83,8 @@ img{
   width: 300px !important; /* 修正多说在 iphone5 宽度下带来的横向滚动条的问题*/
 }
 .imgPic img{
-	width: 200px;
-	height: 200px;
+	width: 100px;
+	height: 100px;
 	border: 1px solid #ccc;
 	display: inline-block;
 }
