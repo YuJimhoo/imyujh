@@ -43,7 +43,6 @@ h2{
 
 @media only screen and (min-width: 600px) {
     #container {
-      border-top: 1px solid #ccc;
       padding: 30px 60px 40px 60px;
     }
 }
@@ -113,5 +112,9 @@ li a {
 }
 li a:hover{
     color:#CA0C16;
+}
+h3{
+	padding-top:5px;
+	border-top:2px solid #F8B62D;
 }
 	
