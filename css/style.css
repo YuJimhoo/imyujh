@@ -59,8 +59,10 @@ h2{
 ul{
   margin-top: 30px;
 }
-.postlist{
-  padding: 0px;
+.postlist {
+    padding: 0px;
+    height: 80px;
+    border-bottom: 1px solid #ccc;
 }
 .postlist a:hover{
   text-decoration: none;
@@ -74,25 +76,35 @@ img{
    display: block;
    margin: 30px auto;
 }
-.datetime{
-  float: right;
-  color: #999;
-  font-family: 'Open Sans', sans-serif
+.datetime {
+    float: right;
+    color: #999;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 40px;
 }
 .ds-social-links{
   width: 300px !important; /* 修正多说在 iphone5 宽度下带来的横向滚动条的问题*/
 }
 .imgPic img{
-				width: 120px;
-				height: 120px;
-				border: 1px solid #ccc;
-				display: inline-block;
-			}
-			.imgPic img:hover{
-				border: 1px solid red;
-			}
-			.imgPic{
-				width: 100%;
-				margin: 0 auto;
-				padding: 0 auto;
-			}
+	width: 120px;
+	height: 120px;
+	border: 1px solid #ccc;
+	display: inline-block;
+}
+.imgPic img:hover{
+	border: 1px solid red;
+}
+.imgPic{
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+li a {
+    color: #4183C4;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: font-family: "SF Pro Display",Roboto,Noto,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
