@@ -63,6 +63,7 @@ ul{
     padding: 0px;
     height: 80px;
     border-bottom: 1px solid #ccc;
+    position: relative;
 }
 .postlist a:hover{
   text-decoration: none;
@@ -80,7 +81,10 @@ img{
     float: right;
     color: #999;
     font-family: 'Open Sans', sans-serif;
-    padding-top: 40px;
+    padding-top: 2px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
 .ds-social-links{
   width: 300px !important; /* 修正多说在 iphone5 宽度下带来的横向滚动条的问题*/
