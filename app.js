@@ -68,7 +68,7 @@ function toggleDuoshuoComments(container, id){
     var url = window.location.href;
     el.setAttribute('data-thread-key', id);
     el.setAttribute('data-url', url);
-    DUOSHUO.EmbedThread(el);
+    //DUOSHUO.EmbedThread(el);
     jQuery(container).append(el);
 }
 
