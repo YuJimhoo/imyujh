@@ -1,6 +1,7 @@
 body{
   padding: 0px 10px 30px 10px;
   font-size: 16px;
+  background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531514…c2e60600c33e474d68873343463%2Fcb8065380cd7912382cbeb4ea6345982b2b780e4.jpg);
 }
 .blog_title{
   font-size: 26px;
@@ -78,7 +79,7 @@ img{
 }
 .datetime {
     float: right;
-    color: #999;
+    color: black;
     font-family: 'Open Sans', sans-serif;
     padding-top: 2px;
     position: absolute;
