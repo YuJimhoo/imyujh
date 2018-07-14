@@ -140,3 +140,8 @@ img{
 .content{
 	    padding: 5px;
 }
+.list{
+	padding: 7px;
+	position: relative;
+}
+	
