@@ -1,7 +1,7 @@
 body{
   padding: 0px 10px 30px 10px;
   font-size: 16px;
-	    background-color: #f5f7f9;
+	    background-color: white;
 }
 .blog_title{
   font-size: 26px;
@@ -132,7 +132,7 @@ h3{
     background: #fff;
     /* margin-bottom: 10px; */
     border-radius: 3px;
-    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 img{
 	    border-radius: 10px;
