@@ -124,7 +124,7 @@
     <div class="container">
         <h1 class="t_nav"><span>不要轻易放弃。学习成长的路上，我们长路漫漫，只因学无止境。 </span><a href="/" class="n1">网站首页</a><a href="/" class="n2">学无止境</a></h1>
         <!--blogsbox begin-->
-        <div id="container">
+        <div id="container" style="border: 1px solid #ccc;overflow: hidden;">
             <center><img src="loading.gif" alt="loading" class="loading"></center>
         </div>
         <!--<div class="pagelist"><a title="Total record">&nbsp;<b>45</b> </a>&nbsp;&nbsp;&nbsp;<b>1</b>&nbsp;<a href="/download/index_2.html">2</a>&nbsp;<a href="/download/index_2.html">下一页</a>&nbsp;<a href="/download/index_2.html">尾页</a></div>-->
@@ -137,7 +137,7 @@
 </body>
 </html>
 <script type="text/ractive" id="listTpl">
-    <ul class="blogsbox" style="border: 1px solid #ccc;">
+    <ul class="blogsbox" style="margin-top: 0px;">
         {{#posts}}
         <li class="blogs" data-scroll-reveal="enter bottom over 1s">
             <h3 onclick="hideBanner(this)" class="blogtitle"><a href="#post/{{number}}">{{title}}</a></h3>
