@@ -18,7 +18,8 @@ function index(page){
         beforeSend:function(){
           $('#container').html('<center><img src="loading.gif" class="loading"></center>');
         },
-        success:function(data, textStatus, jqXHR){
+        success: function (data, textStatus, jqXHR) {
+            debugger;
             var link = jqXHR.getResponseHeader("Link") || "";
             var next = false;
             var prev = false;
