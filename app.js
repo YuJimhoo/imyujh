@@ -19,7 +19,6 @@ function index(page){
           $('#container').html('<center><img src="loading.gif" class="loading"></center>');
         },
         success: function (data, textStatus, jqXHR) {
-            debugger;
             var link = jqXHR.getResponseHeader("Link") || "";
             var next = false;
             var prev = false;
@@ -108,6 +107,8 @@ function detail(id){
     });  
 
 }
+
+
 
 var helpers = Ractive.defaults.data;
 helpers.markdown2HTML = function(content){
