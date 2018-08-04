@@ -20,7 +20,7 @@
         }
     });
     /*banner*/
-    $('#banner').easyFader();
+    //$('#banner').easyFader();
 
     /*topnav select*/
     var obj = null;
