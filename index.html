@@ -75,7 +75,7 @@
     </header>
     <div class="pagebg sh"></div>
     <div class="midleIframe">
-        <iframe id="iframePage" onload="setIframeHeight('iframePage')" align="absmiddle" src="html/home.html" width='100%' height='100%' scrolling="no" frameborder='0'></iframe>
+        <iframe id="iframePage" name="iframePage" onload="setIframeHeight('iframePage')" align="absmiddle" src="html/home.html" width='100%' height='100%' scrolling="no" frameborder='0'></iframe>
     </div>
     <footer id="footer" style="display:none !important;">
         <p>Design by <a href="http://www.yjhzxy.cn" target="_blank">余锦湖个人博客</a> <a href="/">蜀ICP备11002373号-1</a></p>
@@ -86,13 +86,7 @@
 <script src="app.js"></script>
 <script>
     //父窗口根据子窗口调整高度
-    setIframeHeight('iframePage');
-    function setIframeHeight(id) {
-        var iframe = document.getElementById(id);
-        iframe.height = iframe.contentWindow.document.documentElement.scrollHeight;
-        $('#footer').show();
-        return;
-    }
+    startInit('iframePage', 560);
 
     function changeToPage(res) {
         var $this = $(res);
@@ -100,4 +94,53 @@
         iframePage.src = $this.attr('data-page');
         return;
     }
+
+    var browserVersion = window.navigator.userAgent.toUpperCase();
+    var isOpera = browserVersion.indexOf("OPERA") > -1 ? true : false;
+    var isFireFox = browserVersion.indexOf("FIREFOX") > -1 ? true : false;
+    var isChrome = browserVersion.indexOf("CHROME") > -1 ? true : false;
+    var isSafari = browserVersion.indexOf("SAFARI") > -1 ? true : false;
+    var isIE = (!!window.ActiveXObject || "ActiveXObject" in window);
+    var isIE9More = (! -[1,] == false);
+    function reinitIframe(iframeId, minHeight) {
+        try {
+            var iframe = document.getElementById(iframeId);
+            var bHeight = 0;
+            if (isChrome == false && isSafari == false) {
+                try {
+                    bHeight = iframe.contentWindow.document.body.scrollHeight;
+                } catch (ex) {
+                }
+            }
+            var dHeight = 0;
+            if (isFireFox == true)
+                dHeight = iframe.contentWindow.document.documentElement.offsetHeight + 2;//如果火狐浏览器高度不断增加删除+2
+            else if (isIE == false && isOpera == false && iframe.contentWindow) {
+                try {
+                    dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+                } catch (ex) {
+                }
+            }
+            else if (isIE == true && isIE9More) {//ie9+
+                var heightDeviation = bHeight - eval("window.IE9MoreRealHeight" + iframeId);
+                if (heightDeviation == 0) {
+                    bHeight += 3;
+                } else if (heightDeviation != 3) {
+                    eval("window.IE9MoreRealHeight" + iframeId + "=" + bHeight);
+                    bHeight += 3;
+                }
+            }
+            else//ie[6-8]、OPERA
+                bHeight += 3;
+
+            var height = Math.max(bHeight, dHeight);
+            if (height < minHeight) height = minHeight;
+            //alert(iframe.contentWindow.document.body.scrollHeight + "~" + iframe.contentWindow.document.documentElement.scrollHeight);
+            iframe.style.height = height + "px";
+        } catch (ex) { }
+    }
+    function startInit(iframeId, minHeight) {
+        eval("window.IE9MoreRealHeight" + iframeId + "=0");
+        window.setInterval("reinitIframe('" + iframeId + "'," + minHeight + ")", 100);
+    } 
 </script>
