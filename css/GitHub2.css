@@ -120,7 +120,7 @@ li p.first {
 li {
   margin: 0; }
 ul, ol {
-  padding-left: 30px; }
+  /*padding-left: 30px;*/ }
 
 ul :first-child, ol :first-child {
   margin-top: 0; }
