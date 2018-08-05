@@ -44,7 +44,7 @@
             <div class="bloginfo">
                 <ul>
                     <li class="timer">{{formatTime(created_at)}}</li>
-                    <li class="like"><a style="color:#{{labels[0].color}};font-size:12px;" href="{{labels[0].url}}">{{labels[0].name}}</a></li>
+                    <li class="like"><a style="color:#{{labels[0].color}};font-size:12px;cursor:pointer;" onclick="directToPage('{{labels[0].url}}')">{{labels[0].name}}</a></li>
                 </ul>
             </div>
         </li>
@@ -102,7 +102,6 @@
         //2.调用scrollReveal里的reveal方法将scrollReveal内部的动画和css中的标签关联起来
         sr.reveal('.blogs', config);
         //参数一：跟html标签关联的类名
-
     });
 
     //子窗口控制父窗口滚动条
@@ -111,5 +110,10 @@
             scrollTop: 210,
         }, 500
         );
+    }
+
+    //根据label筛选文章
+    function directToPage(url) {
+        window.parent.location.href = url;
     }
 </script>
