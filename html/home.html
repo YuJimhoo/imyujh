@@ -40,10 +40,11 @@
         <li class="blogs" data-scroll-reveal="enter bottom over 1s">
             <h3 onclick="hideBanner(this)" class="blogtitle"><a href="#post/{{number}}">{{title}}</a></h3>
             <span class="blogpic"><a href="#post/{{number}}" title="">{{{markdown2HTML(img)}}}</a></span>
-            <p class="blogtext">如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！... </p>
+            <p class="blogtext">{{title}} </p>
             <div class="bloginfo">
                 <ul>
                     <li class="timer">{{formatTime(created_at)}}</li>
+                    <li class="like"><a style="color:#{{labels[0].color}};font-size:12px;" href="{{labels[0].url}}">{{labels[0].name}}</a></li>
                 </ul>
             </div>
         </li>

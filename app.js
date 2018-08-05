@@ -34,10 +34,16 @@ function index(page){
                 var subStr = data[i].body.substring(data[i].body.indexOf('!['), 1000);
                 var img = subStr.substring(subStr.indexOf('!['), subStr.indexOf('g)') + 2);
                 data[i]['img'] = img;
+
+                //labels url 跳转
+                if (data[i].labels.length>0) {
+                    data[i].labels[0].url = data[i].labels[0].url.replace('api.', '');
+                    data[i].labels[0].url = data[i].labels[0].url.replace('repos', '');
+                }
             }
             var ractive = new Ractive({
-                template : '#listTpl',
-                data     : {
+                template: '#listTpl',
+                data: {
                     posts: data,
                     next  : next,
                     prev  : prev,
