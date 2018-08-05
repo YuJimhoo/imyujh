@@ -28,16 +28,24 @@ function index(page){
             if(link.indexOf('rel="prev"') > 0){
               prev = true;
             }
+
+            //提取mardonw的第一个图片
+            for (var i = 0; i < data.length; i++) {
+                var subStr = data[i].body.substring(data[i].body.indexOf('!['), 1000);
+                var img = subStr.substring(subStr.indexOf('!['), subStr.indexOf('g)') + 2);
+                data[i]['img'] = img;
+            }
             var ractive = new Ractive({
                 template : '#listTpl',
                 data     : {
-                    posts : data,
+                    posts: data,
                     next  : next,
                     prev  : prev,
                     page  : page
                 }
             });
             window._G.postList[page] = ractive.toHTML();
+            $(window._G.postList[page]).find('img:first')
             $('#container').html(window._G.postList[page]);
 
             //将文章列表的信息存到全局变量中，避免重复请求

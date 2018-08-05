@@ -39,7 +39,7 @@
         {{#posts}}
         <li class="blogs" data-scroll-reveal="enter bottom over 1s">
             <h3 onclick="hideBanner(this)" class="blogtitle"><a href="#post/{{number}}">{{title}}</a></h3>
-            <span class="blogpic"><a href="#post/{{number}}" title=""><img src="../images/toppic01.jpg" alt=""></a></span>
+            <span class="blogpic"><a href="#post/{{number}}" title="">{{{markdown2HTML(img)}}}</a></span>
             <p class="blogtext">如图，要实现上图效果，我采用如下方法：1、首先在数据库模型，增加字段，分别是图片2，图片3。2、增加标签模板，用if，else if 来判断，输出。思路已打开，样式调用就可以多样化啦！... </p>
             <div class="bloginfo">
                 <ul>
@@ -96,7 +96,6 @@
                 console.log('滚轮结束了');
             }
         };
-        debugger;
         //1.创建一个scrollReveal对象
         window.sr = ScrollReveal();
         //2.调用scrollReveal里的reveal方法将scrollReveal内部的动画和css中的标签关联起来
