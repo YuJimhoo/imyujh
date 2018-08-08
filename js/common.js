@@ -79,8 +79,7 @@
         );
     });
     
-    //设置固定关注我们
-
+  //设置固定关注我们
 if ($('#follow-us')){
     var followUsPosition = $('#follow-us').offset().top;
     window.onscroll = function () {
@@ -95,3 +94,15 @@ if ($('#follow-us')){
     };
 }
 });
+
+//iframe高度自适应
+function changeFrameHeight(height) {
+    var iframe = window.parent.document.getElementById("iframePage");
+    if (iframe) {
+        var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+        if (iframeWin.document.body) {
+            iframe.height = height;
+            $(iframe).attr("height", height);
+        }
+    }
+}

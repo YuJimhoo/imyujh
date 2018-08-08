@@ -107,13 +107,21 @@
     //子窗口控制父窗口滚动条
     function backToTop() {
         $(window.parent.document).find('body,html').animate({
-            scrollTop: 210,
+            scrollTop: 210
         }, 500
         );
+        //根据子窗口的高度修改Iframe的宽度
+        changeFrameHeight($('.container').height());
     }
 
     //根据label筛选文章
     function directToPage(url) {
         window.parent.location.href = url;
     }
+    //iframe高度自适应
+    var height = $('body').height();
+    setInterval(function () {
+        changeFrameHeight($('.container').height());
+    }, 5000);
+
 </script>

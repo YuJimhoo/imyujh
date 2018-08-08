@@ -28,7 +28,7 @@
                 <h1 class="logo" style="margin: 0;"><a href="http://www.yjhzxy.cn">博客开发中...</a></h1>
                 <li onclick="changeToPage(this)" data-page="html/home.html"><a href="#">网站首页</a> </li>
                 <li onclick="changeToPage(this)" data-page="html/myInfo.html"><a href="#">关于我</a> </li>
-                <li onclick="changeToPage(this)" data-page="html/time.html"><a href="#">时间轴</a> </li>
+                <li onclick="changeToPage(this)" data-page="html/chat.html"><a href="#">撩一下</a> </li>
                 <li>
                     <a href="life.html">慢生活</a>
                     <ul class="sub-nav">
@@ -92,6 +92,7 @@
     //父窗口根据子窗口调整高度
     startInit('iframePage', 560);
 
+    //页面跳转
     function changeToPage(res) {
         var $this = $(res);
         var iframePage = document.getElementById("iframePage");
@@ -105,7 +106,7 @@
     var isChrome = browserVersion.indexOf("CHROME") > -1 ? true : false;
     var isSafari = browserVersion.indexOf("SAFARI") > -1 ? true : false;
     var isIE = (!!window.ActiveXObject || "ActiveXObject" in window);
-    var isIE9More = (! -[1,] == false);
+    var isIE9More = (! -[1] == false);
     function reinitIframe(iframeId, minHeight) {
         try {
             var iframe = document.getElementById(iframeId);
@@ -147,8 +148,4 @@
         eval("window.IE9MoreRealHeight" + iframeId + "=0");
         window.setInterval("reinitIframe('" + iframeId + "'," + minHeight + ")", 100);
     }
-
-    //setInterval(function () {
-    //    startInit('iframePage', 560);
-    //}, 5000);
 </script>
