@@ -39,8 +39,6 @@
             }
             var message = $('.search-input').val();
             sendMessage(message);
-
-
         }
 
         //发送消息给接口
@@ -60,25 +58,20 @@
             xhr.onreadystatechange = function () {
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     var getData = JSON.parse(xhr.responseText)['text'];
-                    $('.search-hidden').val(getData.trim());
+                    _html = "萌萌哒机器人：";
+                    if (!getData.length) {
+                        _html = "萌萌哒机器人：";
+                    }
+                    else {
+                        _html += "<b>" + getData.trim() + "</b>";
+                    }
+                    $('.result-container').html('<span>' + _html + '</span>');
+                    $('.result-container').fadeIn(100);
                 }
             }
         }
 
         function submitFn(obj, evt) {
-            value = $(obj).find('.search-hidden').val().trim();
-
-            _html = "萌萌哒机器人：";
-            if (!value.length) {
-                _html = "萌萌哒机器人：";
-            }
-            else {
-                _html += "<b>" + value + "</b>";
-            }
-
-            $(obj).find('.result-container').html('<span>' + _html + '</span>');
-            $(obj).find('.result-container').fadeIn(100);
-
             evt.preventDefault();
         }
 
@@ -92,8 +85,6 @@
             //根据子窗口的高度修改Iframe的宽度
             changeFrameHeight($('.container').height());
         }
-
-
     </script>
 </body>
 </html>
