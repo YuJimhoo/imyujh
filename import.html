@@ -41,7 +41,7 @@
 </body>
 </html>
 <script>
-    //js 读取文件
+    //js读取文件
     function jsReadFiles(files) {
         if (files.length) {
             var file = files[0];
@@ -57,14 +57,13 @@
                     }
                     var arrRes = groupBooks(array);
                     arrRes.pop();
-
                     $('#container').empty();
                     var liHtml = "";
                     for (var j = 0; j < arrRes.length; j++) {
                         liHtml += "<ul class=\"slideToggle\"><li><p onclick=\"slideToggle(this)\" class='redColor'>" + (j + 1) + "." + arrRes[j]["book"] + "</p>";
                         liHtml += "<ul class=\"content\">";
                         for (var k = 0; k < arrRes[j].data.length; k++) {
-                            liHtml += "<li>" + arrRes[j].data[k]["note"] + "</li>";
+                            liHtml += "<li>" + arrRes[j].data[k]["note"] +"&nbsp&nbsp<br/>"+"&nbsp&nbsp\n" + "</li>";
                         }
                         liHtml += "</ul>";
                         liHtml += "</li></ul>";
