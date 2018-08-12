@@ -1,5 +1,5 @@
 var _config = {
-    blog_name       : '余锦湖',         // 博客名称
+    blog_name       : '清心',         // 博客名称
     owner           : 'y715434031',           // github 用户名
     repo            : 'jhblog.github.io',// github 中对应项目名
     //duoshuo_id      : 'hello1234',            // 在第三方评论插件多说申请站点的子域名
