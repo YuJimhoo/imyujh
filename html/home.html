@@ -111,17 +111,35 @@
         }, 500
         );
         //根据子窗口的高度修改Iframe的宽度
-        changeFrameHeight($('body').height());
+        intervalIframe();
     }
 
     //根据label筛选文章
     function directToPage(url) {
         window.parent.location.href = url;
     }
-    //iframe高度自适应
-    var height = $('body').height();
-    setInterval(function () {
-        changeFrameHeight($('body').height());
-    }, 1000);
 
+    //根据子窗口的高度修改Iframe的宽度
+    intervalIframe();
+    function intervalIframe() {
+        var index = 0;
+        var interval = setInterval(function () {
+            index++;
+            if (index == 3) {
+                clearInterval(interval);
+            }
+            changeFrameHeight($('body').height());
+        }, 1000);
+    }
+
+    //iframe高度自适应
+    function changeFrameHeight(height) {
+        var iframe = window.parent.document.getElementById("iframePage");
+        if (iframe) {
+            var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+            if (iframeWin.document.body) {
+                $(iframe)[0].style.height = height + "px";
+            }
+        }
+    }
 </script>

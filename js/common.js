@@ -95,13 +95,4 @@ if ($('#follow-us')){
 }
 });
 
-//iframe高度自适应
-function changeFrameHeight(height) {
-    var iframe = window.parent.document.getElementById("iframePage");
-    if (iframe) {
-        var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
-        if (iframeWin.document.body) {
-            $(iframe)[0].style.height = height + "px";
-        }
-    }
-}
+
