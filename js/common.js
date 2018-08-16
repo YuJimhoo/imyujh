@@ -101,8 +101,7 @@ function changeFrameHeight(height) {
     if (iframe) {
         var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
         if (iframeWin.document.body) {
-            iframe.height = height;
-            $(iframe).attr("height", height);
+            $(iframe)[0].style.height = height + "px";
         }
     }
 }

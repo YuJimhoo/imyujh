@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="gbk">
-    <title>学无止境_清心个人博客</title>
+    <title>清心个人博客</title>
     <meta name="keywords" content="个人博客,清心个人博客,个人博客模板,清心" />
     <meta name="description" content="清心个人博客" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -111,7 +111,7 @@
         }, 500
         );
         //根据子窗口的高度修改Iframe的宽度
-        changeFrameHeight($('.container').height());
+        changeFrameHeight($('body').height());
     }
 
     //根据label筛选文章
@@ -121,7 +121,7 @@
     //iframe高度自适应
     var height = $('body').height();
     setInterval(function () {
-        changeFrameHeight($('.container').height());
-    }, 5000);
+        changeFrameHeight($('body').height());
+    }, 1000);
 
 </script>
