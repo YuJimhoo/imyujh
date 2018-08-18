@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="gbk">
-    <title>清心个人博客</title>
-    <meta name="keywords" content="个人博客,清心个人博客,个人博客模板,清心" />
+    <title>清心</title>
+    <meta name="keywords" content="个人博客,清心个人博客,个人博,清心" />
     <meta name="description" content="清心个人博客" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='../css/GitHub2.css' type='text/css' />
@@ -38,8 +38,8 @@
     <ul class="blogsbox" style="margin-top: 0px;">
         {{#posts}}
         <li class="blogs" data-scroll-reveal="enter bottom over 1s">
-            <h3  onclick="backToTop()" class="blogtitle"><a href="#post/{{number}}">{{title}}</a></h3>
-            <span class="blogpic"><a  onclick="backToTop()" href="#post/{{number}}" title="">{{{markdown2HTML(img)}}}</a></span>
+            <h3 onclick="backToTop()" class="blogtitle"><a href="#post/{{number}}">{{title}}</a></h3>
+            <span class="blogpic"><a onclick="backToTop()" href="#post/{{number}}" title="">{{{markdown2HTML(img)}}}</a></span>
             <p class="blogtext">{{title}} </p>
             <div class="bloginfo">
                 <ul>
@@ -59,7 +59,7 @@
     {{#post}}
     <h1>{{title}}</h1>
     <span class="create_at">
-        <a href="{{user.html_url}}"><img style="width:18px;height:18px;" src="{{user.avatar_url}}&s=18" class="avatar">.{{user.login}}</a>.
+        <a href="{{user.html_url}}"><img style="width:18px;height:18px;" src="{{user.avatar_url}}&s=18" class="avatar">.{{user.login}}</a>
         发表于 {{formatTime(created_at)}}
     </span>
     <div class="content">{{{markdown2HTML(body)}}}</div>
@@ -68,42 +68,6 @@
 <script src="../app.js"></script>
 <script src="../js/scrollreveal.min.js"></script>
 <script>
-    $(function () {
-        //参数二：动画配置
-        var config = {
-            reset: true,   // 滚动鼠标时，动画开关(默认是false没有打开鼠标滚动的动画开关)
-            origin: 'right', // 动画开始的方向
-            duration: 500,   // 动画持续时间
-            delay: 0, // 延迟
-            rotate: { x: 0, y: 0, z: 0 },  // 过度到0的初始角度
-            opacity: 0.2, // 初始透明度  (0.2到1的效果)
-            scale: 2,       //缩放
-            easing: 'ease-in-out', //动画效果// 缓动'ease', 'ease-in-out'，'linear'...
-            // 回调函数
-            //当动画开始之前会被触发
-            beforeReveal: function (domEl) {
-                console.log('动画执行了');
-            },
-            //鼠标滚轮滚动之前会被触发
-            beforeReset: function (domEl) {
-                console.log('滚轮开始---');
-            },
-            //动画开始之后会被触发
-            afterReveal: function (domEl) {
-                console.log('动画结束了');
-            },
-            //滚轮滚动之后会被触发
-            afterReset: function (domEl) {
-                console.log('滚轮结束了');
-            }
-        };
-        //1.创建一个scrollReveal对象
-        window.sr = ScrollReveal();
-        //2.调用scrollReveal里的reveal方法将scrollReveal内部的动画和css中的标签关联起来
-        sr.reveal('.blogs', config);
-        //参数一：跟html标签关联的类名
-    });
-
     //子窗口控制父窗口滚动条
     function backToTop() {
         $(window.parent.document).find('body,html').animate({
@@ -125,7 +89,7 @@
         var index = 0;
         var interval = setInterval(function () {
             index++;
-            if (index == 3) {
+            if (index == 2) {
                 clearInterval(interval);
             }
             changeFrameHeight($('body').height());
