@@ -1,0 +1,81 @@
+{
+  "html/home.html": {
+    "href": "html/home.html",
+    "resources": [
+      "app.js",
+      "../images/followImg/loading.gif",
+      "js/scrollreveal.min.js",
+      "css/GitHub2.css",
+      "css/base.css",
+      "css/index.css",
+      "css/m.css",
+      "css/style.css",
+      "css/highlight.css",
+      "js/jquery.min.js",
+      "js/jquery.easyfader.min.js",
+      "js/common.js",
+      "js/jquery-2.0.3.min.js",
+      "js/director.min.js",
+      "js/ractive.min.js",
+      "js/marked.min.js",
+      "config.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "html/myInfo.html": {
+    "href": "html/myInfo.html",
+    "resources": [
+      "css/GitHub2.css",
+      "css/base.css",
+      "css/index.css",
+      "css/m.css",
+      "css/style.css",
+      "css/highlight.css",
+      "js/jquery.min.js",
+      "js/jquery.easyfader.min.js",
+      "js/scrollReveal.js",
+      "js/common.js",
+      "js/jquery-2.0.3.min.js",
+      "js/director.min.js",
+      "js/ractive.min.js",
+      "js/marked.min.js",
+      "config.js",
+      "../images/followImg/qq.jpg"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "html/chat.html": {
+    "href": "html/chat.html",
+    "resources": [
+      "css/search-form.css",
+      "js/jquery-2.1.1.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "css/base.css",
+      "css/index.css",
+      "css/m.css",
+      "js/jquery.min.js",
+      "js/jquery.easyfader.min.js",
+      "js/scrollReveal.js",
+      "js/common.js",
+      "js/jquery-2.0.3.min.js",
+      "js/director.min.js",
+      "js/ractive.min.js",
+      "js/marked.min.js",
+      "config.js"
+    ],
+    "refer": [
+      "html/home.html",
+      "html/myInfo.html",
+      "html/chat.html"
+    ],
+    "priority": 0
+  }
+}
