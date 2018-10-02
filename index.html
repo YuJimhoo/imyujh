@@ -1,132 +1,41 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="gbk">
-    <title>清心</title>
-    <meta name="keywords" content="个人博客,清心个人博客,个人博客,清心" />
-    <meta name="description" content="清心个人博客" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/base.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
-    <link href="css/m.css" rel="stylesheet">
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script src="js/jquery.easyfader.min.js"></script>
-    <script src="js/scrollReveal.js"></script>
-    <script src="js/common.js"></script>
-    <!--博客js-->
-    <script src="js/jquery-2.0.3.min.js"></script>
-    <script src="js/director.min.js"></script>
-    <script src="js/ractive.min.js"></script>
-    <script src="js/marked.min.js"></script>
-    <script src="config.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 </head>
+<style type="text/css">
+    @media (min-width: 600) {
+        body {
+            font-size: 17px;
+        }
+
+        a {
+            font-size: 50px;
+        }
+    }
+    .row {
+        width: 880px;
+        margin: 0 auto;
+        padding: 0;
+        padding-top: 3%;
+    }
+        .row .btn {
+            line-height: 20rem;
+            font-size: 4rem;
+            box-shadow: 0 1px 4px #c5c5c5;
+        }
+</style>
+
 <body>
-    <header>
-        <!--menu begin-->
-        <div class="menu">
-            <nav class="nav" id="topnav">
-                <h1 class="logo" style="margin: 0;"><a href="http://www.yujinhu.cn">Yujinhu's Blog</a></h1>
-                <li onclick="changeToPage(this)" data-page="html/home.html"><a href="#">首页</a> </li>
-                <li onclick="changeToPage(this)" data-page="html/myInfo.html"><a href="#">关于我</a> </li>
-                <li><a href="https://jisuye.com/">极速页</a> </li>
-                <li onclick="changeToOtherPage(this)" data-page="html/follow.html"><a href="#">我关注</a> </li>
-                <li onclick="changeToOtherPage(this)" data-page="html/game.html"><a href="#">编程游戏</a> </li>
-            </nav>
-        </div>
-        <!--menu end-->
-        <!--mnav begin-->
-        <div id="mnav" style="background: black;">
-            <h2><a href="http://www.yujinhu.cn" class="mlogo">Yujinhu's Blog</a><span class="navicon"></span></h2>
-            <dl class="list_dl">
-                <dt onclick="changeToPage(this)" data-page="html/home.html" class="list_dt"> <a href="#">首页</a> </dt>
-                <dt onclick="changeToPage(this)" data-page="html/myInfo.html" class="list_dt"> <a href="#">关于我</a> </dt>
-                <dt onclick="changeToOtherPage(this)" data-page="html/follow.html" class="list_dt"> <a href="#">我关注</a> </dt>
-                <dt class="list_dt"> <a href="https://jisuye.com/">极速页</a> </dt>
-                <dt onclick="changeToOtherPage(this)" data-page="html/game.html" class="list_dt"> <a href="#">编程游戏</a> </dt>
-                <dt onclick="changeToPage(this)" data-page="html/chat.html" class="list_dt"> <a href="#">撩一下</a> </dt>
-            </dl>
-        </div>
-        <!--mnav end-->
-    </header>
-    <div class="pagebg sh"></div>
-    <div class="midleIframe">
-        <iframe id="iframePage" name="iframePage" align="absmiddle" src="html/home.html" width='100%' height='100%' scrolling="no" frameborder='0'></iframe>
+    <div class="row">
+        <a href="http://yujinhu.cnblogs.com/" class="btn btn-default col-xs-6 col-sm-6">博客园</a>
+        <a href="https://github.com/imyujh" class="btn btn-default col-xs-6 col-sm-6">GitHub</a>
+        <a href="https://blog.csdn.net/qq_34769573" class="btn btn-default col-xs-6 col-sm-6">CSDN</a>
+        <a href="html/follow.html" class="btn btn-default col-xs-6 col-sm-6">我关注</a>
     </div>
-    <footer id="footer">
-        <p>
-            <span style="color: gray;">2018 ©</span>
-            <a href="https://github.com/imyujh" style="color: gray;">GitHub </a>|
-            <a href="https://blog.csdn.net/qq_34769573" style="color: gray;">CSDN </a>|
-            <a href="https://www.zhihu.com/people/yjhnzb/activities" style="color: gray;">知乎</a>
-        </p>
-    </footer>
-    <a href="#" class="cd-top">Top</a>
 </body>
+
 </html>
-<script>
-    //父窗口根据子窗口调整高度
-    startInit('iframePage', 560);
-
-    //页面跳转
-    function changeToPage(res) {
-        var $this = $(res);
-        var iframePage = document.getElementById("iframePage");
-        iframePage.src = $this.attr('data-page');
-        return;
-    }
-    function changeToOtherPage(res) {
-        debugger;
-        var $this = $(res);
-        window.location.href = $this.attr('data-page');
-        return;
-    }
-
-    var browserVersion = window.navigator.userAgent.toUpperCase();
-    var isOpera = browserVersion.indexOf("OPERA") > -1 ? true : false;
-    var isFireFox = browserVersion.indexOf("FIREFOX") > -1 ? true : false;
-    var isChrome = browserVersion.indexOf("CHROME") > -1 ? true : false;
-    var isSafari = browserVersion.indexOf("SAFARI") > -1 ? true : false;
-    var isIE = (!!window.ActiveXObject || "ActiveXObject" in window);
-    var isIE9More = (! -[1] == false);
-    function reinitIframe(iframeId, minHeight) {
-        try {
-            var iframe = document.getElementById(iframeId);
-            var bHeight = 0;
-            if (isChrome == false && isSafari == false) {
-                try {
-                    bHeight = iframe.contentWindow.document.body.scrollHeight;
-                } catch (ex) {
-                }
-            }
-            var dHeight = 0;
-            if (isFireFox == true)
-                dHeight = iframe.contentWindow.document.documentElement.offsetHeight + 2;//如果火狐浏览器高度不断增加删除+2
-            else if (isIE == false && isOpera == false && iframe.contentWindow) {
-                try {
-                    dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
-                } catch (ex) {
-                }
-            }
-            else if (isIE == true && isIE9More) {//ie9+
-                var heightDeviation = bHeight - eval("window.IE9MoreRealHeight" + iframeId);
-                if (heightDeviation == 0) {
-                    bHeight += 3;
-                } else if (heightDeviation != 3) {
-                    eval("window.IE9MoreRealHeight" + iframeId + "=" + bHeight);
-                    bHeight += 3;
-                }
-            }
-            else//ie[6-8]、OPERA
-                bHeight += 3;
-
-            var height = Math.max(bHeight, dHeight);
-            if (height < minHeight) height = minHeight;
-            //alert(iframe.contentWindow.document.body.scrollHeight + "~" + iframe.contentWindow.document.documentElement.scrollHeight);
-            iframe.style.height = height + "px";
-        } catch (ex) { }
-    }
-    function startInit(iframeId, minHeight) {
-        eval("window.IE9MoreRealHeight" + iframeId + "=0");
-        window.setInterval("reinitIframe('" + iframeId + "'," + minHeight + ")", 100);
-    }
-</script>
