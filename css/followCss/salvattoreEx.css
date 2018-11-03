@@ -7,7 +7,7 @@
 /* Base styles */
 .column { float: left; }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 300px) {
 .column { float: none; position: relative; clear: both; }
 }
 .size-1of8 { width: 12.5%; }
@@ -18,26 +18,29 @@
 #fh5co-board[data-columns]::before { content: '4 .column.size-1of4'; }
 
 /* Configurate salvattore with media queries */
-@media screen and (max-width: 450px) {
+/*@media screen and (max-width: 450px) {
 #fh5co-board[data-columns]::before { content: '1 .column'; }
-}
-
-@media screen and (min-width: 451px) and (max-width: 700px) {
+}*/
+@media screen and (min-width: 200px) and (max-width: 320px) {
 #fh5co-board[data-columns]::before { content: '2 .column.size-1of2'; }
 }
 
-@media screen and (min-width: 701px) and (max-width: 850px) {
+@media screen and (min-width: 321px) and (max-width: 451px) {
 #fh5co-board[data-columns]::before { content: '3 .column.size-1of3'; }
 }
 
-@media screen and (min-width: 851px) {
+/*@media screen and (min-width: 400px) and (max-width: 850px) {
+#fh5co-board[data-columns]::before { content: '3 .column.size-1of3'; }
+}*/
+
+@media screen and (min-width: 451px) {
 #fh5co-board[data-columns]::before { content: '4 .column.size-1of4'; }
 }
 
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 651px) {
 #fh5co-board[data-columns]::before { content: '6 .column.size-1of6'; }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 851px) {
 #fh5co-board[data-columns]::before { content: '8 .column.size-1of8'; }
 }
