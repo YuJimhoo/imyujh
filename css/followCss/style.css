@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 @font-face { font-family: 'icomoon'; src: url("../fonts/icomoon/icomoon.eot?srf3rx"); src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg"); font-weight: normal; font-style: normal; }
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
@@ -1767,7 +1767,7 @@ h1, h2, h3, h4, h5, h6 { color: #000; font-family: "Montserrat", arial, sans-ser
 }
 .fh5co-bg-section .fh5co-overlay { background: #000; opacity: .7; }
 .fh5co-bg-section .author { font-size: 20px; margin-bottom: 0; }
-#fh5co-main { padding-top: 5em; }
+#fh5co-main { padding-top: 2em; }
 #fh5co-board .item { margin: 10px 10px 20px 10px; background: #fff; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; overflow: hidden; -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); }
 #fh5co-board .item a { display: block; }
 #fh5co-board .item .fh5co-desc { padding: 20px; float: left; line-height: 24px; }

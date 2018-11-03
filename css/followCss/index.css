@@ -1,0 +1,21 @@
+﻿.catListTitle {
+    background: #C1C1C1;
+    border-bottom: #000000;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    height: 1.8em;
+    line-height: 1.3em;
+    padding: 6px;
+    text-indent: 0.5em;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+a {
+    color: #000000;
+}
+
+.blogName a {
+    color: #555454;
+}
