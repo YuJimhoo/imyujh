@@ -19,3 +19,23 @@ a {
 .blogName a {
     color: #555454;
 }
+.borderLeft{
+    vertical-align: 7px;
+    display: inline-block;
+    width: 3%;
+    border-top: 1px solid #ccc;
+}
+.borderRight{
+    display: inline-block;
+    min-width:60%;
+    width: auto;
+}
+
+.titleName{
+    color: #ADA4A4;
+    text-align: center;
+    display: inline-block;
+    width: 7%;
+    font-size: 18px;
+    min-width:90px;
+}
