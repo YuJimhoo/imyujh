@@ -24,8 +24,10 @@
     <link href="css/followCss/index.css" rel="stylesheet" />
 
     <script src="../js/modernizr-2.6.2.min.js"></script>
+    <head>
 </head>
-<body>
+</head>
+<body onload="dispPrompt()">
     <div id="fh5co-main">
         <div class="container">
 
@@ -520,3 +522,11 @@
 
 </body>
 </html>
+<script type="text/javascript">
+ function dispPrompt() {
+                var password = prompt("请输入密码：", "")
+                while (password != "0") {
+                    var password = prompt("请输入密码：", "")
+                }
+            }
+</script>
