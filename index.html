@@ -27,7 +27,7 @@
     <head>
 </head>
 </head>
-<body onload="dispPrompt()">
+<body onload="dispPrompt()" style="display:none;">
     <div id="fh5co-main">
         <div class="container">
 
@@ -528,5 +528,6 @@
                 while (password != "0") {
                     var password = prompt("请输入密码：", "")
                 }
+                $('body').show();
             }
 </script>
