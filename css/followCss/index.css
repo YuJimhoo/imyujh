@@ -33,7 +33,7 @@ a {
 
 .titleName{
     color: #0a95da;
-    text-align: center;
+    margin-left: 10px;
     display: inline-block;
     width: 7%;
     font-size: 18px;
