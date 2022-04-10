@@ -1,3 +1,3 @@
 # 导航页面
 
-[导航地址](https://imyujh.github.io/)
+[导航](https://imyujh.github.io/)
