@@ -1,4 +1,5 @@
-[许知远-资讯](https://www.baidu.com/s?rtt=1&bsst=1&cl=2&tn=news&ie=utf-8&word=许知远?_blank)
+[https://bing.xinac.net](https://bing.xinac.net){target="_blank"}
+[许知远-资讯](https://www.baidu.com/s?rtt=1&bsst=1&cl=2&tn=news&ie=utf-8&word=许知远){target="_blank"}
 [许知远-博客](https://xzy.blogchina.com/)
 [马家辉-微博](https://weibo.com/1243428715)
 [马家辉-知乎](https://www.zhihu.com/people/ma-jia-hui-10)
