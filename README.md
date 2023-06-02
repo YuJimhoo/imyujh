@@ -134,6 +134,7 @@
 [马东-微博](https://weibo.com/u/1496883447)
 [樊登-微博](https://weibo.com/fandeng)
 [樊登读书](https://weibo.com/u/5324776767)
+[东方甄选](https://space.bilibili.com/1712204232)
 [包刚升](https://weibo.com/u/1878059365)
 [刘震云-微博](https://weibo.com/liuzhenyun)
 [王小东-西瓜](https://www.ixigua.com/home/19486299805/)
