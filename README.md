@@ -158,6 +158,7 @@
 [王垠-微博](https://www.weibo.com/p/1005056347862377)
 [杨大宝-知乎](https://www.zhihu.com/people/yang-da-bao-32)
 [杨大宝识-微博](https://weibo.com/u/6446081688)
+[王冰冰](https://space.bilibili.com/2026561407)
 [王宇轩](https://weibo.com/u/2208837710)
 [关睿怡](https://weibo.com/5603869358)
 [张文静](https://weibo.com/u/6035880033)
