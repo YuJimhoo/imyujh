@@ -163,6 +163,7 @@
 [王宇轩](https://weibo.com/u/2208837710)
 [关睿怡](https://weibo.com/5603869358)
 [张文静](https://weibo.com/u/6035880033)
+[xiaoxiao](https://space.bilibili.com/3461580303895160)
 [杆哥](https://www.huya.com/475974)
 [大风懿](https://m.huya.com/15346803)
 [柯南](https://m.huya.com/520199)
