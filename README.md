@@ -174,6 +174,7 @@
 [jelly](https://space.bilibili.com/699644554)
 [小白测评](https://space.bilibili.com/8969156)
 [科技美学](https://space.bilibili.com/3766866)
+[俞俐均](https://space.bilibili.com/3493261259835869)
 [战鹰](https://space.bilibili.com/2051617240)
 [许博远](https://weibo.com/u/3219327535?lpage=profileRecom)
 [陈诺](https://www.zhihu.com/people/chen-nuo-64)
