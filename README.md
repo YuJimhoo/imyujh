@@ -83,6 +83,8 @@
 [刘子超-微博](https://weibo.com/zenlunatic)
 [返朴-微博](https://weibo.com/u/7006367380)
 [马岩松-微博](https://weibo.com/madarchitects)
+[赵泠-知乎](https://www.zhihu.com/people/MarryMea)
+[赵泠-爱发电](https://afdian.net/a/MarryMea)
 [一席-官网](https://www.yixi.tv/#/speech)
 [李玫瑾-微博](https://www.weibo.com/limeijin)
 [郝蕾](https://blog.sina.com.cn/s/articlelist_1295614221_0_1.html)
